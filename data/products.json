@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "5V Relay Module",
+    "price": 2.50,
+    "description": "Single channel relay module for Arduino, rated 10A/250V.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/5V_Relay_Module.jpg"
+  },
+  {
+    "id": 2,
+    "name": "220 Ohm Resistor",
+    "price": 0.05,
+    "description": "Standard ¼ watt resistor, color code: red-red-brown.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Resistor.jpg"
+  },
+  {
+    "id": 3,
+    "name": "DC Motor 6V",
+    "price": 3.00,
+    "description": "Small brushed DC motor ideal for DIY electronics.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/DC_motor.jpg"
+  }
+]
