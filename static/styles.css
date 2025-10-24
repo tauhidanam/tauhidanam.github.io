@@ -1,34 +1,21 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f8fc;
     text-align: center;
-    padding: 40px;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 40px;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
+img {
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #999;
 }
 
-input[type="text"] {
-    padding: 10px;
-    width: 70%;
+a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #0078ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-.product img {
-    width: 200px;
-    margin-top: 15px;
-    border-radius: 10px;
+a:hover {
+    text-decoration: underline;
 }
