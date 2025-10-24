@@ -2,25 +2,16 @@
 <html>
 <head>
     <title>Robohta Electronics</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Robohta Electronics Store</h1>
-        <form method="POST">
-            <input type="text" name="product_name" placeholder="Enter product (e.g. relay, resistor)">
-            <button type="submit">Search</button>
-        </form>
+    <h1>Welcome to Robohta Electronics</h1>
+    <p>Buy high-quality electronic components online!</p>
 
-        {% if product_info %}
-        <div class="product">
-            <h2>{{ product_info.name }}</h2>
-            {% if product_info.image %}
-                <img src="{{ product_info.image }}" alt="{{ product_info.name }}">
-            {% endif %}
-            <p>{{ product_info.description }}</p>
-        </div>
-        {% endif %}
+    <div class="product-list">
+        <a href="/product/relay">5V Relay Module</a><br>
+        <a href="/product/resistor">220 Ohm Resistor</a><br>
+        <a href="/product/motor">DC Motor 6V</a><br>
     </div>
 </body>
 </html>
