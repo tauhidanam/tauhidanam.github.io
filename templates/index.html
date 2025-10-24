@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Available Products</h2>
-<div class="product-grid">
-    {% for p in products %}
-    <div class="product">
-        <img src="{{ p.image }}" width="200">
-        <h3>{{ p.name }}</h3>
-        <p>${{ p.price }}</p>
-        <a href="/product/{{ p.id }}">View</a>
-    </div>
-    {% endfor %}
+<h2 class="text-3xl font-bold mb-6 text-center">Shop Electronic Components</h2>
+
+<div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+  {% for p in products %}
+  <div class="bg-white rounded-2xl shadow-md hover:shadow-xl p-4 transition">
+    <img src="{{ p.image }}" alt="{{ p.name }}" class="w-full h-48 object-contain mb-4">
+    <h3 class="text-xl font-semibold">{{ p.name }}</h3>
+    <p class="text-gray-600 text-sm mb-2">{{ p.description[:80] }}...</p>
+    <p class="text-lg font-bold mb-3">${{ "%.2f"|format(p.price) }}</p>
+    <a href="/product/{{ p.id }}" 
+       class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg">
+       View Product
+    </a>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}
