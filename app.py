@@ -1,44 +1,80 @@
-from flask import Flask, render_template, request
+import json
+import os
+from flask import Flask, render_template, request, redirect, url_for, session
+import stripe
 import requests
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
+app.secret_key = "your_secret_key_here"
 
-# Home route
+# Stripe setup (replace with your test key from https://dashboard.stripe.com/test/apikeys)
+stripe.api_key = "sk_test_..."
+
+# Load products
+def load_products():
+    with open("data/products.json") as f:
+        return json.load(f)
+
 @app.route('/')
 def home():
-    return render_template('index.html')
+    products = load_products()
+    return render_template('index.html', products=products)
 
-# Product details (placeholder)
-@app.route('/product/<name>')
-def product(name):
-    # Dummy example (replace later with real API or manual data)
-    specs = {
-        "relay": {
-            "name": "5V Relay Module",
-            "description": "Single channel relay module for Arduino, rated 10A/250V.",
-            "price": "$2.50",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/5V_Relay_Module.jpg"
-        },
-        "resistor": {
-            "name": "220 Ohm Resistor",
-            "description": "Standard ¼ watt resistor, color code: red-red-brown.",
-            "price": "$0.05",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Resistor.jpg"
-        },
-        "motor": {
-            "name": "DC Motor 6V",
-            "description": "Small brushed DC motor ideal for DIY electronics.",
-            "price": "$3.00",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/DC_motor.jpg"
-        }
-    }
-
-    product = specs.get(name.lower(), None)
-    if not product:
-        return f"Product '{name}' not found.", 404
-
+@app.route('/product/<int:pid>')
+def product(pid):
+    products = load_products()
+    product = next((p for p in products if p["id"] == pid), None)
     return render_template('product.html', product=product)
 
+@app.route('/add_to_cart/<int:pid>')
+def add_to_cart(pid):
+    products = load_products()
+    product = next((p for p in products if p["id"] == pid), None)
+    if not product:
+        return "Product not found"
+
+    cart = session.get("cart", [])
+    cart.append(product)
+    session["cart"] = cart
+    return redirect(url_for("cart"))
+
+@app.route('/cart')
+def cart():
+    cart = session.get("cart", [])
+    total = sum(item["price"] for item in cart)
+    return render_template("cart.html", cart=cart, total=total)
+
+@app.route('/checkout', methods=["POST"])
+def checkout():
+    cart = session.get("cart", [])
+    total = int(sum(item["price"] for item in cart) * 100)
+
+    session["cart"] = []
+
+    checkout_session = stripe.checkout.Session.create(
+        payment_method_types=["card"],
+        line_items=[
+            {
+                "price_data": {
+                    "currency": "usd",
+                    "product_data": {
+                        "name": "Robohta Order"
+                    },
+                    "unit_amount": total,
+                },
+                "quantity": 1,
+            },
+        ],
+        mode="payment",
+        success_url=request.host_url + "success",
+        cancel_url=request.host_url + "cart",
+    )
+    return redirect(checkout_session.url, code=303)
+
+@app.route('/success')
+def success():
+    return "<h1>✅ Payment Successful! Thank you for shopping with Robohta Electronics.</h1>"
 
 if __name__ == "__main__":
     app.run(debug=True)
