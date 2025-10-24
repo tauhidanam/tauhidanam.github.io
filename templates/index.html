@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Robohta Electronics</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <h1>Welcome to Robohta Electronics</h1>
-    <p>Buy high-quality electronic components online!</p>
-
-    <div class="product-list">
-        <a href="/product/relay">5V Relay Module</a><br>
-        <a href="/product/resistor">220 Ohm Resistor</a><br>
-        <a href="/product/motor">DC Motor 6V</a><br>
+{% extends "base.html" %}
+{% block content %}
+<h2>Available Products</h2>
+<div class="product-grid">
+    {% for p in products %}
+    <div class="product">
+        <img src="{{ p.image }}" width="200">
+        <h3>{{ p.name }}</h3>
+        <p>${{ p.price }}</p>
+        <a href="/product/{{ p.id }}">View</a>
     </div>
-</body>
-</html>
+    {% endfor %}
+</div>
+{% endblock %}
