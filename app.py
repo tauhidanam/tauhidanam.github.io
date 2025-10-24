@@ -1,34 +1,48 @@
-# app.py
-from flask import Flask, render_template, send_from_directory, jsonify
-import json
-from pathlib import Path
+from flask import Flask, render_template, request
+import requests
+from bs4 import BeautifulSoup
 
-app = Flask(__name__, static_folder="output/images")
-PRODUCTS_JSON = Path("output/products.json")
+app = Flask(__name__)
 
-@app.route("/")
-def home():
-    products = []
-    if PRODUCTS_JSON.exists():
-        with open(PRODUCTS_JSON, encoding="utf-8") as f:
-            products = json.load(f)
-    for p in products:
-        if p.get("image_path"):
-            p["image_url"] = "/" + p["image_path"].replace("\\", "/")
-        else:
-            p["image_url"] = None
-    return render_template("index.html", products=products)
+def scrape_product_info(product_name):
+    """Scrape product info and image from Wikipedia and DuckDuckGo (no API)."""
+    info = {"name": product_name, "description": "No description found.", "image": None}
 
-@app.route("/output/<path:filename>")
-def serve_output(filename):
-    return send_from_directory("output", filename)
+    # Try Wikipedia first
+    wiki_url = f"https://en.wikipedia.org/wiki/{product_name.replace(' ', '_')}"
+    wiki_response = requests.get(wiki_url)
 
-@app.route("/products.json")
-def api():
-    if PRODUCTS_JSON.exists():
-        with open(PRODUCTS_JSON, encoding="utf-8") as f:
-            return jsonify(json.load(f))
-    return jsonify([])
+    if wiki_response.status_code == 200:
+        soup = BeautifulSoup(wiki_response.text, "html.parser")
+        paragraphs = soup.select("p")
+        if paragraphs:
+            info["description"] = paragraphs[0].get_text().strip()
+
+        img_tag = soup.select_one("table.infobox img")
+        if img_tag and img_tag.get("src"):
+            info["image"] = "https:" + img_tag["src"]
+
+    # If no image found, use DuckDuckGo
+    if not info["image"]:
+        duck_url = f"https://duckduckgo.com/?q={product_name}+electronic+component&iax=images&ia=images"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        duck_page = requests.get(duck_url, headers=headers).text
+        soup = BeautifulSoup(duck_page, "html.parser")
+        img_tag = soup.find("img")
+        if img_tag and img_tag.get("src"):
+            info["image"] = img_tag["src"]
+
+    return info
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    product_info = None
+    if request.method == "POST":
+        product_name = request.form.get("product_name")
+        product_info = scrape_product_info(product_name)
+    return render_template("index.html", product_info=product_info)
+
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True)
