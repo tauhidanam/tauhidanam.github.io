@@ -1,36 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ product_info.name }} | Robohta Electronics</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.image }}" alt="{{ product.name }}" width="300">
+    <p>{{ product.description }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
 
-        <h1>{{ product_info.name }}</h1>
-
-        {% if product_info.image %}
-        <img src="{{ product_info.image }}" alt="{{ product_info.name }}" class="product-image">
-        {% endif %}
-
-        <div class="product-details">
-            <h3>Product Description</h3>
-            <p>{{ product_info.description }}</p>
-
-            <h3>Specifications</h3>
-            {% if product_info.specs %}
-                <ul>
-                    {% for key, value in product_info.specs.items() %}
-                        <li><strong>{{ key }}:</strong> {{ value }}</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>No detailed specs available.</p>
-            {% endif %}
-        </div>
-    </div>
+    <a href="/">← Back to Home</a>
 </body>
 </html>
