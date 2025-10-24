@@ -1,23 +1,27 @@
-[
-  {
-    "id": 1,
-    "name": "5V Relay Module",
-    "price": 2.50,
-    "description": "Single channel relay module for Arduino, rated 10A/250V, optocoupler isolation.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/5V_Relay_Module.jpg"
-  },
-  {
-    "id": 2,
-    "name": "220 Ohm Resistor (Pack of 100)",
-    "price": 1.99,
-    "description": "Standard 1/4 watt 220Ω resistor set for Arduino and Raspberry Pi projects.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Resistor.jpg"
-  },
-  {
-    "id": 3,
-    "name": "6V DC Motor",
-    "price": 3.50,
-    "description": "Mini DC motor suitable for robotics and DIY projects.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/DC_motor.jpg"
-  }
-]
+{
+  "id": 1,
+  "name": "3D Printer 100K ohm NTC 3950 Thermistor",
+  "model": "4028",
+  "price": 7.00,
+  "description": "High precision NTC thermistor for 3D printer temperature sensing.",
+  "specs": [
+    "Resistance: 100K ± 1%",
+    "B-Value: 3950K",
+    "Temperature range: -40°C to 250°C",
+    "Fast response time"
+  ],
+  "details": [
+    "Ideal for hotend and heated bed temperature measurement",
+    "Compatible with most 3D printers",
+    "No polarity required"
+  ],
+  "stock": true,
+  "image": "https://example.com/main_image.jpg",
+  "images": [
+    "https://example.com/thumb1.jpg",
+    "https://example.com/thumb2.jpg"
+  ],
+  "rating": 5,
+  "reviews": 4028,
+  "review_text": "Excellent thermistor for 3D printing. Very accurate and reliable."
+}
