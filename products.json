@@ -1,27 +1,1702 @@
-{
-  "id": 1,
-  "name": "3D Printer 100K ohm NTC 3950 Thermistor",
-  "model": "4028",
-  "price": 7.00,
-  "description": "High precision NTC thermistor for 3D printer temperature sensing.",
-  "specs": [
-    "Resistance: 100K ± 1%",
-    "B-Value: 3950K",
-    "Temperature range: -40°C to 250°C",
-    "Fast response time"
-  ],
-  "details": [
-    "Ideal for hotend and heated bed temperature measurement",
-    "Compatible with most 3D printers",
-    "No polarity required"
-  ],
-  "stock": true,
-  "image": "https://example.com/main_image.jpg",
-  "images": [
-    "https://example.com/thumb1.jpg",
-    "https://example.com/thumb2.jpg"
-  ],
-  "rating": 5,
-  "reviews": 4028,
-  "review_text": "Excellent thermistor for 3D printing. Very accurate and reliable."
-}
+[
+    {
+        "id": 1,
+        "name": "Motors Model 1001",
+        "price": 3226.01,
+        "model": "M-0001",
+        "stock": 6,
+        "rating": 3.9,
+        "category": "Motors",
+        "image": "/static/images/product_1.jpg",
+        "description": "Motors Model 1001 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "1.01A",
+            "Accuracy": "3%",
+            "Temperature Range": "-8\u00b0C to 62\u00b0C"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Modules Model 1002",
+        "price": 1769.52,
+        "model": "M-0002",
+        "stock": 12,
+        "rating": 3.6,
+        "category": "Modules",
+        "image": "/static/images/product_2.jpg",
+        "description": "Modules Model 1002 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "14V",
+            "Current": "1.41A",
+            "Accuracy": "1%",
+            "Temperature Range": "-17\u00b0C to 84\u00b0C"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Microcontrollers Model 1003",
+        "price": 2689.14,
+        "model": "M-0003",
+        "stock": 71,
+        "rating": 4.6,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_3.jpg",
+        "description": "Microcontrollers Model 1003 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "4V",
+            "Current": "1.71A",
+            "Accuracy": "5%",
+            "Temperature Range": "-16\u00b0C to 98\u00b0C"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Sensors Model 1004",
+        "price": 2983.22,
+        "model": "M-0004",
+        "stock": 94,
+        "rating": 4.1,
+        "category": "Sensors",
+        "image": "/static/images/product_4.jpg",
+        "description": "Sensors Model 1004 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "14V",
+            "Current": "1.57A",
+            "Accuracy": "2%",
+            "Temperature Range": "-13\u00b0C to 119\u00b0C"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Power Supply Model 1005",
+        "price": 3343.03,
+        "model": "M-0005",
+        "stock": 40,
+        "rating": 3.6,
+        "category": "Power Supply",
+        "image": "/static/images/product_5.jpg",
+        "description": "Power Supply Model 1005 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "4V",
+            "Current": "0.92A",
+            "Accuracy": "1%",
+            "Temperature Range": "-9\u00b0C to 86\u00b0C"
+        }
+    },
+    {
+        "id": 6,
+        "name": "3D Printer Parts Model 1006",
+        "price": 2464.35,
+        "model": "M-0006",
+        "stock": 25,
+        "rating": 3.6,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_6.jpg",
+        "description": "3D Printer Parts Model 1006 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "1.58A",
+            "Accuracy": "2%",
+            "Temperature Range": "-14\u00b0C to 74\u00b0C"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Sensors Model 1007",
+        "price": 1699.88,
+        "model": "M-0007",
+        "stock": 36,
+        "rating": 4.2,
+        "category": "Sensors",
+        "image": "/static/images/product_7.jpg",
+        "description": "Sensors Model 1007 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "12V",
+            "Current": "1.08A",
+            "Accuracy": "1%",
+            "Temperature Range": "-3\u00b0C to 107\u00b0C"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Sensors Model 1008",
+        "price": 2048.36,
+        "model": "M-0008",
+        "stock": 27,
+        "rating": 4.0,
+        "category": "Sensors",
+        "image": "/static/images/product_8.jpg",
+        "description": "Sensors Model 1008 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "6V",
+            "Current": "1.06A",
+            "Accuracy": "1%",
+            "Temperature Range": "0\u00b0C to 56\u00b0C"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Displays Model 1009",
+        "price": 2290.31,
+        "model": "M-0009",
+        "stock": 96,
+        "rating": 3.7,
+        "category": "Displays",
+        "image": "/static/images/product_9.jpg",
+        "description": "Displays Model 1009 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "9V",
+            "Current": "0.71A",
+            "Accuracy": "5%",
+            "Temperature Range": "-19\u00b0C to 66\u00b0C"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Modules Model 1010",
+        "price": 902.62,
+        "model": "M-0010",
+        "stock": 20,
+        "rating": 4.5,
+        "category": "Modules",
+        "image": "/static/images/product_10.jpg",
+        "description": "Modules Model 1010 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "8V",
+            "Current": "0.67A",
+            "Accuracy": "5%",
+            "Temperature Range": "-15\u00b0C to 104\u00b0C"
+        }
+    },
+    {
+        "id": 11,
+        "name": "3D Printer Parts Model 1011",
+        "price": 2847.43,
+        "model": "M-0011",
+        "stock": 88,
+        "rating": 4.0,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_11.jpg",
+        "description": "3D Printer Parts Model 1011 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "22V",
+            "Current": "0.21A",
+            "Accuracy": "2%",
+            "Temperature Range": "-6\u00b0C to 124\u00b0C"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Modules Model 1012",
+        "price": 497.92,
+        "model": "M-0012",
+        "stock": 59,
+        "rating": 4.7,
+        "category": "Modules",
+        "image": "/static/images/product_12.jpg",
+        "description": "Modules Model 1012 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "0.44A",
+            "Accuracy": "5%",
+            "Temperature Range": "-10\u00b0C to 70\u00b0C"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Displays Model 1013",
+        "price": 3219.72,
+        "model": "M-0013",
+        "stock": 46,
+        "rating": 4.2,
+        "category": "Displays",
+        "image": "/static/images/product_13.jpg",
+        "description": "Displays Model 1013 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "20V",
+            "Current": "1.72A",
+            "Accuracy": "4%",
+            "Temperature Range": "-7\u00b0C to 112\u00b0C"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Motors Model 1014",
+        "price": 2637.54,
+        "model": "M-0014",
+        "stock": 96,
+        "rating": 4.7,
+        "category": "Motors",
+        "image": "/static/images/product_14.jpg",
+        "description": "Motors Model 1014 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "9V",
+            "Current": "0.7A",
+            "Accuracy": "2%",
+            "Temperature Range": "-13\u00b0C to 103\u00b0C"
+        }
+    },
+    {
+        "id": 15,
+        "name": "3D Printer Parts Model 1015",
+        "price": 2260.95,
+        "model": "M-0015",
+        "stock": 77,
+        "rating": 4.6,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_15.jpg",
+        "description": "3D Printer Parts Model 1015 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "22V",
+            "Current": "1.8A",
+            "Accuracy": "3%",
+            "Temperature Range": "-10\u00b0C to 94\u00b0C"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Power Supply Model 1016",
+        "price": 2662.1,
+        "model": "M-0016",
+        "stock": 117,
+        "rating": 4.5,
+        "category": "Power Supply",
+        "image": "/static/images/product_16.jpg",
+        "description": "Power Supply Model 1016 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "15V",
+            "Current": "1.18A",
+            "Accuracy": "5%",
+            "Temperature Range": "-6\u00b0C to 116\u00b0C"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Modules Model 1017",
+        "price": 1028.78,
+        "model": "M-0017",
+        "stock": 80,
+        "rating": 4.8,
+        "category": "Modules",
+        "image": "/static/images/product_17.jpg",
+        "description": "Modules Model 1017 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "1.03A",
+            "Accuracy": "4%",
+            "Temperature Range": "-20\u00b0C to 54\u00b0C"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Displays Model 1018",
+        "price": 699.91,
+        "model": "M-0018",
+        "stock": 24,
+        "rating": 3.7,
+        "category": "Displays",
+        "image": "/static/images/product_18.jpg",
+        "description": "Displays Model 1018 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "6V",
+            "Current": "1.91A",
+            "Accuracy": "2%",
+            "Temperature Range": "-10\u00b0C to 106\u00b0C"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Modules Model 1019",
+        "price": 2146.04,
+        "model": "M-0019",
+        "stock": 81,
+        "rating": 3.9,
+        "category": "Modules",
+        "image": "/static/images/product_19.jpg",
+        "description": "Modules Model 1019 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "7V",
+            "Current": "1.04A",
+            "Accuracy": "3%",
+            "Temperature Range": "-16\u00b0C to 112\u00b0C"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Power Supply Model 1020",
+        "price": 3320.8,
+        "model": "M-0020",
+        "stock": 103,
+        "rating": 4.3,
+        "category": "Power Supply",
+        "image": "/static/images/product_20.jpg",
+        "description": "Power Supply Model 1020 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "17V",
+            "Current": "0.49A",
+            "Accuracy": "3%",
+            "Temperature Range": "-12\u00b0C to 94\u00b0C"
+        }
+    },
+    {
+        "id": 21,
+        "name": "Modules Model 1021",
+        "price": 693.11,
+        "model": "M-0021",
+        "stock": 149,
+        "rating": 4.6,
+        "category": "Modules",
+        "image": "/static/images/product_21.jpg",
+        "description": "Modules Model 1021 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "21V",
+            "Current": "1.86A",
+            "Accuracy": "1%",
+            "Temperature Range": "-20\u00b0C to 64\u00b0C"
+        }
+    },
+    {
+        "id": 22,
+        "name": "3D Printer Parts Model 1022",
+        "price": 740.81,
+        "model": "M-0022",
+        "stock": 122,
+        "rating": 4.4,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_22.jpg",
+        "description": "3D Printer Parts Model 1022 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "18V",
+            "Current": "1.49A",
+            "Accuracy": "5%",
+            "Temperature Range": "-7\u00b0C to 51\u00b0C"
+        }
+    },
+    {
+        "id": 23,
+        "name": "Modules Model 1023",
+        "price": 2553.58,
+        "model": "M-0023",
+        "stock": 96,
+        "rating": 4.2,
+        "category": "Modules",
+        "image": "/static/images/product_23.jpg",
+        "description": "Modules Model 1023 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "17V",
+            "Current": "0.59A",
+            "Accuracy": "3%",
+            "Temperature Range": "0\u00b0C to 64\u00b0C"
+        }
+    },
+    {
+        "id": 24,
+        "name": "3D Printer Parts Model 1024",
+        "price": 3402.56,
+        "model": "M-0024",
+        "stock": 70,
+        "rating": 4.9,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_24.jpg",
+        "description": "3D Printer Parts Model 1024 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "0.21A",
+            "Accuracy": "2%",
+            "Temperature Range": "-20\u00b0C to 92\u00b0C"
+        }
+    },
+    {
+        "id": 25,
+        "name": "3D Printer Parts Model 1025",
+        "price": 2765.31,
+        "model": "M-0025",
+        "stock": 20,
+        "rating": 3.8,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_25.jpg",
+        "description": "3D Printer Parts Model 1025 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "7V",
+            "Current": "0.44A",
+            "Accuracy": "2%",
+            "Temperature Range": "-19\u00b0C to 104\u00b0C"
+        }
+    },
+    {
+        "id": 26,
+        "name": "Sensors Model 1026",
+        "price": 2305.06,
+        "model": "M-0026",
+        "stock": 54,
+        "rating": 3.8,
+        "category": "Sensors",
+        "image": "/static/images/product_26.jpg",
+        "description": "Sensors Model 1026 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "9V",
+            "Current": "0.68A",
+            "Accuracy": "3%",
+            "Temperature Range": "-8\u00b0C to 113\u00b0C"
+        }
+    },
+    {
+        "id": 27,
+        "name": "Microcontrollers Model 1027",
+        "price": 3487.77,
+        "model": "M-0027",
+        "stock": 136,
+        "rating": 4.0,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_27.jpg",
+        "description": "Microcontrollers Model 1027 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "0.53A",
+            "Accuracy": "1%",
+            "Temperature Range": "-6\u00b0C to 63\u00b0C"
+        }
+    },
+    {
+        "id": 28,
+        "name": "3D Printer Parts Model 1028",
+        "price": 276.54,
+        "model": "M-0028",
+        "stock": 140,
+        "rating": 5.0,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_28.jpg",
+        "description": "3D Printer Parts Model 1028 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "15V",
+            "Current": "1.27A",
+            "Accuracy": "1%",
+            "Temperature Range": "-15\u00b0C to 60\u00b0C"
+        }
+    },
+    {
+        "id": 29,
+        "name": "Power Supply Model 1029",
+        "price": 2037.46,
+        "model": "M-0029",
+        "stock": 92,
+        "rating": 3.8,
+        "category": "Power Supply",
+        "image": "/static/images/product_29.jpg",
+        "description": "Power Supply Model 1029 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "16V",
+            "Current": "0.34A",
+            "Accuracy": "4%",
+            "Temperature Range": "-3\u00b0C to 122\u00b0C"
+        }
+    },
+    {
+        "id": 30,
+        "name": "3D Printer Parts Model 1030",
+        "price": 278.92,
+        "model": "M-0030",
+        "stock": 70,
+        "rating": 4.6,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_30.jpg",
+        "description": "3D Printer Parts Model 1030 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "1.92A",
+            "Accuracy": "3%",
+            "Temperature Range": "-9\u00b0C to 67\u00b0C"
+        }
+    },
+    {
+        "id": 31,
+        "name": "Power Supply Model 1031",
+        "price": 1427.06,
+        "model": "M-0031",
+        "stock": 64,
+        "rating": 4.3,
+        "category": "Power Supply",
+        "image": "/static/images/product_31.jpg",
+        "description": "Power Supply Model 1031 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "12V",
+            "Current": "1.48A",
+            "Accuracy": "4%",
+            "Temperature Range": "-4\u00b0C to 79\u00b0C"
+        }
+    },
+    {
+        "id": 32,
+        "name": "Displays Model 1032",
+        "price": 2833.16,
+        "model": "M-0032",
+        "stock": 136,
+        "rating": 4.5,
+        "category": "Displays",
+        "image": "/static/images/product_32.jpg",
+        "description": "Displays Model 1032 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "21V",
+            "Current": "1.29A",
+            "Accuracy": "1%",
+            "Temperature Range": "-8\u00b0C to 110\u00b0C"
+        }
+    },
+    {
+        "id": 33,
+        "name": "Microcontrollers Model 1033",
+        "price": 2213.29,
+        "model": "M-0033",
+        "stock": 136,
+        "rating": 4.7,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_33.jpg",
+        "description": "Microcontrollers Model 1033 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "20V",
+            "Current": "1.47A",
+            "Accuracy": "2%",
+            "Temperature Range": "-2\u00b0C to 110\u00b0C"
+        }
+    },
+    {
+        "id": 34,
+        "name": "3D Printer Parts Model 1034",
+        "price": 721.17,
+        "model": "M-0034",
+        "stock": 31,
+        "rating": 4.5,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_34.jpg",
+        "description": "3D Printer Parts Model 1034 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "12V",
+            "Current": "0.4A",
+            "Accuracy": "4%",
+            "Temperature Range": "-13\u00b0C to 121\u00b0C"
+        }
+    },
+    {
+        "id": 35,
+        "name": "3D Printer Parts Model 1035",
+        "price": 2423.63,
+        "model": "M-0035",
+        "stock": 105,
+        "rating": 4.9,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_35.jpg",
+        "description": "3D Printer Parts Model 1035 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "23V",
+            "Current": "0.54A",
+            "Accuracy": "2%",
+            "Temperature Range": "-5\u00b0C to 118\u00b0C"
+        }
+    },
+    {
+        "id": 36,
+        "name": "Displays Model 1036",
+        "price": 1157.4,
+        "model": "M-0036",
+        "stock": 15,
+        "rating": 3.7,
+        "category": "Displays",
+        "image": "/static/images/product_36.jpg",
+        "description": "Displays Model 1036 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "9V",
+            "Current": "1.93A",
+            "Accuracy": "3%",
+            "Temperature Range": "-4\u00b0C to 69\u00b0C"
+        }
+    },
+    {
+        "id": 37,
+        "name": "Sensors Model 1037",
+        "price": 3190.78,
+        "model": "M-0037",
+        "stock": 125,
+        "rating": 3.9,
+        "category": "Sensors",
+        "image": "/static/images/product_37.jpg",
+        "description": "Sensors Model 1037 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "15V",
+            "Current": "0.22A",
+            "Accuracy": "2%",
+            "Temperature Range": "-6\u00b0C to 100\u00b0C"
+        }
+    },
+    {
+        "id": 38,
+        "name": "Modules Model 1038",
+        "price": 485.99,
+        "model": "M-0038",
+        "stock": 14,
+        "rating": 4.8,
+        "category": "Modules",
+        "image": "/static/images/product_38.jpg",
+        "description": "Modules Model 1038 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "0.16A",
+            "Accuracy": "2%",
+            "Temperature Range": "-12\u00b0C to 91\u00b0C"
+        }
+    },
+    {
+        "id": 39,
+        "name": "Sensors Model 1039",
+        "price": 335.87,
+        "model": "M-0039",
+        "stock": 37,
+        "rating": 4.8,
+        "category": "Sensors",
+        "image": "/static/images/product_39.jpg",
+        "description": "Sensors Model 1039 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "22V",
+            "Current": "1.33A",
+            "Accuracy": "4%",
+            "Temperature Range": "0\u00b0C to 108\u00b0C"
+        }
+    },
+    {
+        "id": 40,
+        "name": "Displays Model 1040",
+        "price": 2625.66,
+        "model": "M-0040",
+        "stock": 64,
+        "rating": 4.7,
+        "category": "Displays",
+        "image": "/static/images/product_40.jpg",
+        "description": "Displays Model 1040 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "7V",
+            "Current": "1.95A",
+            "Accuracy": "5%",
+            "Temperature Range": "-2\u00b0C to 114\u00b0C"
+        }
+    },
+    {
+        "id": 41,
+        "name": "Sensors Model 1041",
+        "price": 1110.39,
+        "model": "M-0041",
+        "stock": 62,
+        "rating": 4.6,
+        "category": "Sensors",
+        "image": "/static/images/product_41.jpg",
+        "description": "Sensors Model 1041 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "20V",
+            "Current": "1.84A",
+            "Accuracy": "5%",
+            "Temperature Range": "-11\u00b0C to 90\u00b0C"
+        }
+    },
+    {
+        "id": 42,
+        "name": "Modules Model 1042",
+        "price": 2214.75,
+        "model": "M-0042",
+        "stock": 37,
+        "rating": 3.5,
+        "category": "Modules",
+        "image": "/static/images/product_42.jpg",
+        "description": "Modules Model 1042 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "13V",
+            "Current": "1.91A",
+            "Accuracy": "3%",
+            "Temperature Range": "-2\u00b0C to 57\u00b0C"
+        }
+    },
+    {
+        "id": 43,
+        "name": "Sensors Model 1043",
+        "price": 2144.14,
+        "model": "M-0043",
+        "stock": 5,
+        "rating": 3.7,
+        "category": "Sensors",
+        "image": "/static/images/product_43.jpg",
+        "description": "Sensors Model 1043 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "0.77A",
+            "Accuracy": "3%",
+            "Temperature Range": "-1\u00b0C to 113\u00b0C"
+        }
+    },
+    {
+        "id": 44,
+        "name": "Displays Model 1044",
+        "price": 1137.98,
+        "model": "M-0044",
+        "stock": 54,
+        "rating": 4.1,
+        "category": "Displays",
+        "image": "/static/images/product_44.jpg",
+        "description": "Displays Model 1044 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "15V",
+            "Current": "1.33A",
+            "Accuracy": "2%",
+            "Temperature Range": "0\u00b0C to 68\u00b0C"
+        }
+    },
+    {
+        "id": 45,
+        "name": "Modules Model 1045",
+        "price": 724.48,
+        "model": "M-0045",
+        "stock": 78,
+        "rating": 4.3,
+        "category": "Modules",
+        "image": "/static/images/product_45.jpg",
+        "description": "Modules Model 1045 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "23V",
+            "Current": "0.93A",
+            "Accuracy": "1%",
+            "Temperature Range": "-8\u00b0C to 109\u00b0C"
+        }
+    },
+    {
+        "id": 46,
+        "name": "Motors Model 1046",
+        "price": 1961.06,
+        "model": "M-0046",
+        "stock": 82,
+        "rating": 4.8,
+        "category": "Motors",
+        "image": "/static/images/product_46.jpg",
+        "description": "Motors Model 1046 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "17V",
+            "Current": "0.79A",
+            "Accuracy": "2%",
+            "Temperature Range": "-6\u00b0C to 73\u00b0C"
+        }
+    },
+    {
+        "id": 47,
+        "name": "Power Supply Model 1047",
+        "price": 3378.26,
+        "model": "M-0047",
+        "stock": 95,
+        "rating": 4.1,
+        "category": "Power Supply",
+        "image": "/static/images/product_47.jpg",
+        "description": "Power Supply Model 1047 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "19V",
+            "Current": "1.52A",
+            "Accuracy": "3%",
+            "Temperature Range": "-9\u00b0C to 58\u00b0C"
+        }
+    },
+    {
+        "id": 48,
+        "name": "Power Supply Model 1048",
+        "price": 680.71,
+        "model": "M-0048",
+        "stock": 110,
+        "rating": 3.6,
+        "category": "Power Supply",
+        "image": "/static/images/product_48.jpg",
+        "description": "Power Supply Model 1048 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "0.9A",
+            "Accuracy": "3%",
+            "Temperature Range": "-4\u00b0C to 73\u00b0C"
+        }
+    },
+    {
+        "id": 49,
+        "name": "Power Supply Model 1049",
+        "price": 935.53,
+        "model": "M-0049",
+        "stock": 48,
+        "rating": 3.5,
+        "category": "Power Supply",
+        "image": "/static/images/product_49.jpg",
+        "description": "Power Supply Model 1049 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "1.9A",
+            "Accuracy": "1%",
+            "Temperature Range": "-9\u00b0C to 52\u00b0C"
+        }
+    },
+    {
+        "id": 50,
+        "name": "Motors Model 1050",
+        "price": 2425.18,
+        "model": "M-0050",
+        "stock": 100,
+        "rating": 4.7,
+        "category": "Motors",
+        "image": "/static/images/product_50.jpg",
+        "description": "Motors Model 1050 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "0.8A",
+            "Accuracy": "1%",
+            "Temperature Range": "-18\u00b0C to 70\u00b0C"
+        }
+    },
+    {
+        "id": 51,
+        "name": "3D Printer Parts Model 1051",
+        "price": 2375.23,
+        "model": "M-0051",
+        "stock": 11,
+        "rating": 5.0,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_51.jpg",
+        "description": "3D Printer Parts Model 1051 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "14V",
+            "Current": "1.18A",
+            "Accuracy": "1%",
+            "Temperature Range": "-4\u00b0C to 121\u00b0C"
+        }
+    },
+    {
+        "id": 52,
+        "name": "Sensors Model 1052",
+        "price": 1296.47,
+        "model": "M-0052",
+        "stock": 30,
+        "rating": 4.6,
+        "category": "Sensors",
+        "image": "/static/images/product_52.jpg",
+        "description": "Sensors Model 1052 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "14V",
+            "Current": "1.62A",
+            "Accuracy": "5%",
+            "Temperature Range": "-7\u00b0C to 83\u00b0C"
+        }
+    },
+    {
+        "id": 53,
+        "name": "3D Printer Parts Model 1053",
+        "price": 914.77,
+        "model": "M-0053",
+        "stock": 20,
+        "rating": 3.7,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_53.jpg",
+        "description": "3D Printer Parts Model 1053 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "13V",
+            "Current": "1.15A",
+            "Accuracy": "2%",
+            "Temperature Range": "-11\u00b0C to 91\u00b0C"
+        }
+    },
+    {
+        "id": 54,
+        "name": "Microcontrollers Model 1054",
+        "price": 2133.42,
+        "model": "M-0054",
+        "stock": 93,
+        "rating": 4.0,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_54.jpg",
+        "description": "Microcontrollers Model 1054 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "0.26A",
+            "Accuracy": "4%",
+            "Temperature Range": "-10\u00b0C to 65\u00b0C"
+        }
+    },
+    {
+        "id": 55,
+        "name": "Motors Model 1055",
+        "price": 1300.5,
+        "model": "M-0055",
+        "stock": 30,
+        "rating": 3.7,
+        "category": "Motors",
+        "image": "/static/images/product_55.jpg",
+        "description": "Motors Model 1055 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "17V",
+            "Current": "0.21A",
+            "Accuracy": "1%",
+            "Temperature Range": "-10\u00b0C to 117\u00b0C"
+        }
+    },
+    {
+        "id": 56,
+        "name": "Displays Model 1056",
+        "price": 2223.34,
+        "model": "M-0056",
+        "stock": 86,
+        "rating": 4.6,
+        "category": "Displays",
+        "image": "/static/images/product_56.jpg",
+        "description": "Displays Model 1056 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "21V",
+            "Current": "0.16A",
+            "Accuracy": "2%",
+            "Temperature Range": "-1\u00b0C to 120\u00b0C"
+        }
+    },
+    {
+        "id": 57,
+        "name": "Motors Model 1057",
+        "price": 2654.94,
+        "model": "M-0057",
+        "stock": 147,
+        "rating": 3.9,
+        "category": "Motors",
+        "image": "/static/images/product_57.jpg",
+        "description": "Motors Model 1057 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "6V",
+            "Current": "1.53A",
+            "Accuracy": "4%",
+            "Temperature Range": "-8\u00b0C to 93\u00b0C"
+        }
+    },
+    {
+        "id": 58,
+        "name": "Sensors Model 1058",
+        "price": 1592.29,
+        "model": "M-0058",
+        "stock": 123,
+        "rating": 3.9,
+        "category": "Sensors",
+        "image": "/static/images/product_58.jpg",
+        "description": "Sensors Model 1058 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "18V",
+            "Current": "0.55A",
+            "Accuracy": "1%",
+            "Temperature Range": "-6\u00b0C to 87\u00b0C"
+        }
+    },
+    {
+        "id": 59,
+        "name": "Motors Model 1059",
+        "price": 2223.59,
+        "model": "M-0059",
+        "stock": 35,
+        "rating": 4.4,
+        "category": "Motors",
+        "image": "/static/images/product_59.jpg",
+        "description": "Motors Model 1059 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "16V",
+            "Current": "0.33A",
+            "Accuracy": "5%",
+            "Temperature Range": "-17\u00b0C to 68\u00b0C"
+        }
+    },
+    {
+        "id": 60,
+        "name": "Power Supply Model 1060",
+        "price": 1030.83,
+        "model": "M-0060",
+        "stock": 132,
+        "rating": 4.1,
+        "category": "Power Supply",
+        "image": "/static/images/product_60.jpg",
+        "description": "Power Supply Model 1060 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "4V",
+            "Current": "0.96A",
+            "Accuracy": "1%",
+            "Temperature Range": "-12\u00b0C to 88\u00b0C"
+        }
+    },
+    {
+        "id": 61,
+        "name": "Sensors Model 1061",
+        "price": 904.26,
+        "model": "M-0061",
+        "stock": 26,
+        "rating": 4.1,
+        "category": "Sensors",
+        "image": "/static/images/product_61.jpg",
+        "description": "Sensors Model 1061 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "19V",
+            "Current": "1.2A",
+            "Accuracy": "4%",
+            "Temperature Range": "-16\u00b0C to 70\u00b0C"
+        }
+    },
+    {
+        "id": 62,
+        "name": "3D Printer Parts Model 1062",
+        "price": 3273.36,
+        "model": "M-0062",
+        "stock": 121,
+        "rating": 4.8,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_62.jpg",
+        "description": "3D Printer Parts Model 1062 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "1.9A",
+            "Accuracy": "2%",
+            "Temperature Range": "-10\u00b0C to 52\u00b0C"
+        }
+    },
+    {
+        "id": 63,
+        "name": "Sensors Model 1063",
+        "price": 2519.54,
+        "model": "M-0063",
+        "stock": 44,
+        "rating": 4.2,
+        "category": "Sensors",
+        "image": "/static/images/product_63.jpg",
+        "description": "Sensors Model 1063 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "20V",
+            "Current": "0.85A",
+            "Accuracy": "3%",
+            "Temperature Range": "-13\u00b0C to 115\u00b0C"
+        }
+    },
+    {
+        "id": 64,
+        "name": "Modules Model 1064",
+        "price": 2893.99,
+        "model": "M-0064",
+        "stock": 81,
+        "rating": 4.1,
+        "category": "Modules",
+        "image": "/static/images/product_64.jpg",
+        "description": "Modules Model 1064 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "12V",
+            "Current": "0.42A",
+            "Accuracy": "3%",
+            "Temperature Range": "-12\u00b0C to 125\u00b0C"
+        }
+    },
+    {
+        "id": 65,
+        "name": "Motors Model 1065",
+        "price": 1616.08,
+        "model": "M-0065",
+        "stock": 43,
+        "rating": 3.6,
+        "category": "Motors",
+        "image": "/static/images/product_65.jpg",
+        "description": "Motors Model 1065 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "15V",
+            "Current": "0.27A",
+            "Accuracy": "1%",
+            "Temperature Range": "-20\u00b0C to 50\u00b0C"
+        }
+    },
+    {
+        "id": 66,
+        "name": "Sensors Model 1066",
+        "price": 1133.66,
+        "model": "M-0066",
+        "stock": 49,
+        "rating": 3.6,
+        "category": "Sensors",
+        "image": "/static/images/product_66.jpg",
+        "description": "Sensors Model 1066 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "8V",
+            "Current": "1.87A",
+            "Accuracy": "2%",
+            "Temperature Range": "-11\u00b0C to 78\u00b0C"
+        }
+    },
+    {
+        "id": 67,
+        "name": "Modules Model 1067",
+        "price": 2978.42,
+        "model": "M-0067",
+        "stock": 23,
+        "rating": 5.0,
+        "category": "Modules",
+        "image": "/static/images/product_67.jpg",
+        "description": "Modules Model 1067 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "16V",
+            "Current": "0.21A",
+            "Accuracy": "5%",
+            "Temperature Range": "-7\u00b0C to 90\u00b0C"
+        }
+    },
+    {
+        "id": 68,
+        "name": "Sensors Model 1068",
+        "price": 332.85,
+        "model": "M-0068",
+        "stock": 54,
+        "rating": 3.9,
+        "category": "Sensors",
+        "image": "/static/images/product_68.jpg",
+        "description": "Sensors Model 1068 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "1.01A",
+            "Accuracy": "5%",
+            "Temperature Range": "-10\u00b0C to 75\u00b0C"
+        }
+    },
+    {
+        "id": 69,
+        "name": "3D Printer Parts Model 1069",
+        "price": 1683.98,
+        "model": "M-0069",
+        "stock": 140,
+        "rating": 4.7,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_69.jpg",
+        "description": "3D Printer Parts Model 1069 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "23V",
+            "Current": "0.21A",
+            "Accuracy": "4%",
+            "Temperature Range": "-8\u00b0C to 80\u00b0C"
+        }
+    },
+    {
+        "id": 70,
+        "name": "Microcontrollers Model 1070",
+        "price": 888.72,
+        "model": "M-0070",
+        "stock": 120,
+        "rating": 4.7,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_70.jpg",
+        "description": "Microcontrollers Model 1070 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "19V",
+            "Current": "1.36A",
+            "Accuracy": "4%",
+            "Temperature Range": "-11\u00b0C to 118\u00b0C"
+        }
+    },
+    {
+        "id": 71,
+        "name": "3D Printer Parts Model 1071",
+        "price": 1964.25,
+        "model": "M-0071",
+        "stock": 102,
+        "rating": 5.0,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_71.jpg",
+        "description": "3D Printer Parts Model 1071 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "10V",
+            "Current": "1.09A",
+            "Accuracy": "5%",
+            "Temperature Range": "-10\u00b0C to 121\u00b0C"
+        }
+    },
+    {
+        "id": 72,
+        "name": "Motors Model 1072",
+        "price": 327.03,
+        "model": "M-0072",
+        "stock": 124,
+        "rating": 4.0,
+        "category": "Motors",
+        "image": "/static/images/product_72.jpg",
+        "description": "Motors Model 1072 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "0.69A",
+            "Accuracy": "1%",
+            "Temperature Range": "-3\u00b0C to 52\u00b0C"
+        }
+    },
+    {
+        "id": 73,
+        "name": "Power Supply Model 1073",
+        "price": 1939.66,
+        "model": "M-0073",
+        "stock": 102,
+        "rating": 4.4,
+        "category": "Power Supply",
+        "image": "/static/images/product_73.jpg",
+        "description": "Power Supply Model 1073 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "4V",
+            "Current": "0.69A",
+            "Accuracy": "4%",
+            "Temperature Range": "-11\u00b0C to 85\u00b0C"
+        }
+    },
+    {
+        "id": 74,
+        "name": "Displays Model 1074",
+        "price": 3464.55,
+        "model": "M-0074",
+        "stock": 80,
+        "rating": 3.6,
+        "category": "Displays",
+        "image": "/static/images/product_74.jpg",
+        "description": "Displays Model 1074 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "9V",
+            "Current": "0.48A",
+            "Accuracy": "2%",
+            "Temperature Range": "-3\u00b0C to 73\u00b0C"
+        }
+    },
+    {
+        "id": 75,
+        "name": "Power Supply Model 1075",
+        "price": 2111.27,
+        "model": "M-0075",
+        "stock": 38,
+        "rating": 3.6,
+        "category": "Power Supply",
+        "image": "/static/images/product_75.jpg",
+        "description": "Power Supply Model 1075 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "7V",
+            "Current": "0.4A",
+            "Accuracy": "5%",
+            "Temperature Range": "-2\u00b0C to 59\u00b0C"
+        }
+    },
+    {
+        "id": 76,
+        "name": "Displays Model 1076",
+        "price": 2177.31,
+        "model": "M-0076",
+        "stock": 83,
+        "rating": 4.3,
+        "category": "Displays",
+        "image": "/static/images/product_76.jpg",
+        "description": "Displays Model 1076 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "13V",
+            "Current": "0.75A",
+            "Accuracy": "4%",
+            "Temperature Range": "-3\u00b0C to 119\u00b0C"
+        }
+    },
+    {
+        "id": 77,
+        "name": "Displays Model 1077",
+        "price": 2548.64,
+        "model": "M-0077",
+        "stock": 24,
+        "rating": 4.6,
+        "category": "Displays",
+        "image": "/static/images/product_77.jpg",
+        "description": "Displays Model 1077 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "13V",
+            "Current": "1.23A",
+            "Accuracy": "5%",
+            "Temperature Range": "-1\u00b0C to 116\u00b0C"
+        }
+    },
+    {
+        "id": 78,
+        "name": "3D Printer Parts Model 1078",
+        "price": 3348.23,
+        "model": "M-0078",
+        "stock": 99,
+        "rating": 3.9,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_78.jpg",
+        "description": "3D Printer Parts Model 1078 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "23V",
+            "Current": "0.62A",
+            "Accuracy": "2%",
+            "Temperature Range": "-11\u00b0C to 99\u00b0C"
+        }
+    },
+    {
+        "id": 79,
+        "name": "Displays Model 1079",
+        "price": 86.36,
+        "model": "M-0079",
+        "stock": 144,
+        "rating": 4.7,
+        "category": "Displays",
+        "image": "/static/images/product_79.jpg",
+        "description": "Displays Model 1079 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "3V",
+            "Current": "1.85A",
+            "Accuracy": "4%",
+            "Temperature Range": "-10\u00b0C to 55\u00b0C"
+        }
+    },
+    {
+        "id": 80,
+        "name": "3D Printer Parts Model 1080",
+        "price": 3172.7,
+        "model": "M-0080",
+        "stock": 130,
+        "rating": 4.4,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_80.jpg",
+        "description": "3D Printer Parts Model 1080 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "1.15A",
+            "Accuracy": "5%",
+            "Temperature Range": "-19\u00b0C to 95\u00b0C"
+        }
+    },
+    {
+        "id": 81,
+        "name": "Power Supply Model 1081",
+        "price": 710.4,
+        "model": "M-0081",
+        "stock": 76,
+        "rating": 3.8,
+        "category": "Power Supply",
+        "image": "/static/images/product_81.jpg",
+        "description": "Power Supply Model 1081 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "1.78A",
+            "Accuracy": "2%",
+            "Temperature Range": "-7\u00b0C to 116\u00b0C"
+        }
+    },
+    {
+        "id": 82,
+        "name": "Power Supply Model 1082",
+        "price": 3246.43,
+        "model": "M-0082",
+        "stock": 141,
+        "rating": 4.9,
+        "category": "Power Supply",
+        "image": "/static/images/product_82.jpg",
+        "description": "Power Supply Model 1082 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "14V",
+            "Current": "1.6A",
+            "Accuracy": "1%",
+            "Temperature Range": "-5\u00b0C to 95\u00b0C"
+        }
+    },
+    {
+        "id": 83,
+        "name": "Microcontrollers Model 1083",
+        "price": 3080.81,
+        "model": "M-0083",
+        "stock": 80,
+        "rating": 4.9,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_83.jpg",
+        "description": "Microcontrollers Model 1083 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "18V",
+            "Current": "0.91A",
+            "Accuracy": "1%",
+            "Temperature Range": "-12\u00b0C to 84\u00b0C"
+        }
+    },
+    {
+        "id": 84,
+        "name": "Sensors Model 1084",
+        "price": 1935.25,
+        "model": "M-0084",
+        "stock": 50,
+        "rating": 4.4,
+        "category": "Sensors",
+        "image": "/static/images/product_84.jpg",
+        "description": "Sensors Model 1084 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "18V",
+            "Current": "1.67A",
+            "Accuracy": "1%",
+            "Temperature Range": "-11\u00b0C to 67\u00b0C"
+        }
+    },
+    {
+        "id": 85,
+        "name": "Displays Model 1085",
+        "price": 2390.07,
+        "model": "M-0085",
+        "stock": 28,
+        "rating": 4.1,
+        "category": "Displays",
+        "image": "/static/images/product_85.jpg",
+        "description": "Displays Model 1085 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "12V",
+            "Current": "0.58A",
+            "Accuracy": "2%",
+            "Temperature Range": "-4\u00b0C to 97\u00b0C"
+        }
+    },
+    {
+        "id": 86,
+        "name": "3D Printer Parts Model 1086",
+        "price": 216.26,
+        "model": "M-0086",
+        "stock": 146,
+        "rating": 4.2,
+        "category": "3D Printer Parts",
+        "image": "/static/images/product_86.jpg",
+        "description": "3D Printer Parts Model 1086 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "20V",
+            "Current": "0.18A",
+            "Accuracy": "3%",
+            "Temperature Range": "-7\u00b0C to 108\u00b0C"
+        }
+    },
+    {
+        "id": 87,
+        "name": "Power Supply Model 1087",
+        "price": 3294.51,
+        "model": "M-0087",
+        "stock": 24,
+        "rating": 3.8,
+        "category": "Power Supply",
+        "image": "/static/images/product_87.jpg",
+        "description": "Power Supply Model 1087 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "3V",
+            "Current": "1.56A",
+            "Accuracy": "1%",
+            "Temperature Range": "-8\u00b0C to 71\u00b0C"
+        }
+    },
+    {
+        "id": 88,
+        "name": "Sensors Model 1088",
+        "price": 1102.68,
+        "model": "M-0088",
+        "stock": 7,
+        "rating": 5.0,
+        "category": "Sensors",
+        "image": "/static/images/product_88.jpg",
+        "description": "Sensors Model 1088 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "17V",
+            "Current": "1.28A",
+            "Accuracy": "5%",
+            "Temperature Range": "-10\u00b0C to 120\u00b0C"
+        }
+    },
+    {
+        "id": 89,
+        "name": "Modules Model 1089",
+        "price": 1476.6,
+        "model": "M-0089",
+        "stock": 19,
+        "rating": 3.6,
+        "category": "Modules",
+        "image": "/static/images/product_89.jpg",
+        "description": "Modules Model 1089 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "1.51A",
+            "Accuracy": "4%",
+            "Temperature Range": "-5\u00b0C to 112\u00b0C"
+        }
+    },
+    {
+        "id": 90,
+        "name": "Power Supply Model 1090",
+        "price": 462.03,
+        "model": "M-0090",
+        "stock": 17,
+        "rating": 4.9,
+        "category": "Power Supply",
+        "image": "/static/images/product_90.jpg",
+        "description": "Power Supply Model 1090 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "5V",
+            "Current": "1.53A",
+            "Accuracy": "5%",
+            "Temperature Range": "-16\u00b0C to 96\u00b0C"
+        }
+    },
+    {
+        "id": 91,
+        "name": "Displays Model 1091",
+        "price": 3324.92,
+        "model": "M-0091",
+        "stock": 58,
+        "rating": 4.9,
+        "category": "Displays",
+        "image": "/static/images/product_91.jpg",
+        "description": "Displays Model 1091 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "11V",
+            "Current": "1.41A",
+            "Accuracy": "5%",
+            "Temperature Range": "-17\u00b0C to 123\u00b0C"
+        }
+    },
+    {
+        "id": 92,
+        "name": "Modules Model 1092",
+        "price": 131.25,
+        "model": "M-0092",
+        "stock": 56,
+        "rating": 4.8,
+        "category": "Modules",
+        "image": "/static/images/product_92.jpg",
+        "description": "Modules Model 1092 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "20V",
+            "Current": "0.34A",
+            "Accuracy": "2%",
+            "Temperature Range": "-20\u00b0C to 83\u00b0C"
+        }
+    },
+    {
+        "id": 93,
+        "name": "Modules Model 1093",
+        "price": 1072.29,
+        "model": "M-0093",
+        "stock": 149,
+        "rating": 4.2,
+        "category": "Modules",
+        "image": "/static/images/product_93.jpg",
+        "description": "Modules Model 1093 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "7V",
+            "Current": "1.24A",
+            "Accuracy": "5%",
+            "Temperature Range": "-19\u00b0C to 105\u00b0C"
+        }
+    },
+    {
+        "id": 94,
+        "name": "Power Supply Model 1094",
+        "price": 1476.76,
+        "model": "M-0094",
+        "stock": 87,
+        "rating": 3.6,
+        "category": "Power Supply",
+        "image": "/static/images/product_94.jpg",
+        "description": "Power Supply Model 1094 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "9V",
+            "Current": "0.95A",
+            "Accuracy": "4%",
+            "Temperature Range": "-10\u00b0C to 61\u00b0C"
+        }
+    },
+    {
+        "id": 95,
+        "name": "Modules Model 1095",
+        "price": 2641.73,
+        "model": "M-0095",
+        "stock": 24,
+        "rating": 3.6,
+        "category": "Modules",
+        "image": "/static/images/product_95.jpg",
+        "description": "Modules Model 1095 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "7V",
+            "Current": "0.55A",
+            "Accuracy": "1%",
+            "Temperature Range": "-3\u00b0C to 51\u00b0C"
+        }
+    },
+    {
+        "id": 96,
+        "name": "Power Supply Model 1096",
+        "price": 2149.84,
+        "model": "M-0096",
+        "stock": 127,
+        "rating": 4.1,
+        "category": "Power Supply",
+        "image": "/static/images/product_96.jpg",
+        "description": "Power Supply Model 1096 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "18V",
+            "Current": "1.22A",
+            "Accuracy": "1%",
+            "Temperature Range": "-20\u00b0C to 112\u00b0C"
+        }
+    },
+    {
+        "id": 97,
+        "name": "Displays Model 1097",
+        "price": 134.26,
+        "model": "M-0097",
+        "stock": 26,
+        "rating": 3.6,
+        "category": "Displays",
+        "image": "/static/images/product_97.jpg",
+        "description": "Displays Model 1097 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "12V",
+            "Current": "0.22A",
+            "Accuracy": "1%",
+            "Temperature Range": "-15\u00b0C to 98\u00b0C"
+        }
+    },
+    {
+        "id": 98,
+        "name": "Microcontrollers Model 1098",
+        "price": 2645.73,
+        "model": "M-0098",
+        "stock": 22,
+        "rating": 3.7,
+        "category": "Microcontrollers",
+        "image": "/static/images/product_98.jpg",
+        "description": "Microcontrollers Model 1098 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "1.2A",
+            "Accuracy": "3%",
+            "Temperature Range": "-11\u00b0C to 107\u00b0C"
+        }
+    },
+    {
+        "id": 99,
+        "name": "Sensors Model 1099",
+        "price": 1440.89,
+        "model": "M-0099",
+        "stock": 48,
+        "rating": 4.6,
+        "category": "Sensors",
+        "image": "/static/images/product_99.jpg",
+        "description": "Sensors Model 1099 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "24V",
+            "Current": "1.72A",
+            "Accuracy": "4%",
+            "Temperature Range": "-2\u00b0C to 86\u00b0C"
+        }
+    },
+    {
+        "id": 100,
+        "name": "Sensors Model 1100",
+        "price": 787.81,
+        "model": "M-0100",
+        "stock": 36,
+        "rating": 4.7,
+        "category": "Sensors",
+        "image": "/static/images/product_100.jpg",
+        "description": "Sensors Model 1100 is a reliable and efficient component suitable for various electronic applications.",
+        "specs": {
+            "Voltage": "17V",
+            "Current": "0.53A",
+            "Accuracy": "3%",
+            "Temperature Range": "-13\u00b0C to 89\u00b0C"
+        }
+    }
+]
