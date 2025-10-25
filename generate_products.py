@@ -1,67 +1,38 @@
-import json, random
+import random
+import json
 
-categories = {
-    "Sensors": [
-        "NTC 100K Thermistor", "HC-SR04 Ultrasonic Sensor", "DHT11 Temperature Sensor", "PIR Motion Sensor", "IR Obstacle Sensor"
-    ],
-    "Motors": [
-        "12V DC Gear Motor", "NEMA17 Stepper Motor", "Mini Servo SG90", "BLDC 2205 Motor", "28BYJ-48 Stepper Motor"
-    ],
-    "Microcontrollers": [
-        "Arduino Uno R3", "ESP32 DevKit", "Raspberry Pi Pico", "NodeMCU ESP8266", "Arduino Nano"
-    ],
-    "Power": [
-        "5V Relay Module", "LM2596 Buck Converter", "7805 Voltage Regulator", "12V Power Supply Adapter", "Lithium Battery Charger TP4056"
-    ],
-    "Passive Components": [
-        "10K Resistor Pack", "100uF Capacitor", "1N4007 Diode", "10K Potentiometer", "220uH Inductor"
-    ]
-}
+categories = ["Sensors", "Motors", "3D Printer Parts", "Microcontrollers", "Displays", "Power Supply", "Modules"]
 
-product_list = []
-id_counter = 1
+products = []
+for i in range(1, 101):  # 100 products
+    category = random.choice(categories)
+    name = f"{category} Model {1000 + i}"
+    price = round(random.uniform(70, 3500), 2)
+    stock = random.randint(5, 150)
+    rating = round(random.uniform(3.5, 5.0), 1)
+    model = f"M-{i:04d}"
+    specs = {
+        "Voltage": f"{random.randint(3, 24)}V",
+        "Current": f"{round(random.uniform(0.1, 2.0), 2)}A",
+        "Accuracy": f"{random.randint(1, 5)}%",
+        "Temperature Range": f"{random.randint(-20, 0)}°C to {random.randint(50, 125)}°C"
+    }
 
-for category, items in categories.items():
-    for _ in range(20):  # 20 per category = 100 total
-        base_name = random.choice(items)
-        model = f"{random.randint(1000,9999)}"
-        price = round(random.uniform(0.5, 25.0), 2)
-        stock = random.randint(5, 200)
-        rating = random.randint(3, 5)
-        reviews = random.randint(10, 500)
-        image = f"https://robohta.me/static/images/{base_name.replace(' ', '_')}.jpg"
-
-        specs = [
-            f"Model: {model}",
-            f"Category: {category}",
-            f"Rated Voltage: {random.choice(['5V','12V','24V','3.3V'])}",
-            f"Operating Temp: -20°C to {random.randint(60,120)}°C",
-            f"Dimensions: {random.randint(5,40)}x{random.randint(5,40)} mm"
-        ]
-
-        details = [
-            f"Ideal for hobbyists, robotics, and DIY projects.",
-            f"Compatible with Arduino and Raspberry Pi.",
-            f"High-quality build with long lifespan."
-        ]
-
-        product_list.append({
-            "id": id_counter,
-            "name": base_name,
-            "model": model,
-            "price": price,
-            "category": category,
-            "description": f"{base_name} is a high-quality component suitable for {category.lower()} applications.",
-            "specs": specs,
-            "details": details,
-            "stock": stock,
-            "image": image,
-            "rating": rating,
-            "reviews": reviews
-        })
-        id_counter += 1
+    product = {
+        "id": i,
+        "name": name,
+        "price": price,
+        "model": model,
+        "stock": stock,
+        "rating": rating,
+        "category": category,
+        "image": f"/static/images/product_{i}.jpg",
+        "description": f"{name} is a reliable and efficient component suitable for various electronic applications.",
+        "specs": specs
+    }
+    products.append(product)
 
 with open("products.json", "w") as f:
-    json.dump(product_list, f, indent=2)
+    json.dump(products, f, indent=4)
 
-print("✅ 100 products generated and saved to products.json")
+print("✅ Generated 100 products and saved to products.json")
