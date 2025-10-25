@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, jsonify
-import json
+import json, os
 
 app = Flask(__name__)
 
+# Load product data
 with open("products.json") as f:
     products = json.load(f)
 
@@ -22,5 +23,10 @@ def index():
 def api_products():
     return jsonify(products)
 
+@app.route("/health")
+def health():
+    return "OK", 200  # Render health check endpoint
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
