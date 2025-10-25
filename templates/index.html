@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Electronics BD Clone</title>
-    <style>
-        body { font-family: Arial; margin: 0; padding: 0; background: #fafafa; }
-        header { background: #222; color: white; padding: 10px; }
-        header input, header select { padding: 5px; margin-right: 10px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; padding: 20px; }
-        .card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 10px; }
-        .card img { width: 100%; height: 150px; object-fit: cover; }
-        .card h4 { margin: 5px 0; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Electronics BD Clone</title>
+  <style>
+    body { font-family: Arial; background: #fafafa; margin: 0; }
+    header { background: #222; color: white; padding: 10px; display: flex; align-items: center; gap: 10px; }
+    input, select, button { padding: 5px; }
+    .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; padding: 20px; }
+    .card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; }
+    .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
+  </style>
 </head>
 <body>
-    <header>
-        <form method="get" action="/">
-            <input type="text" name="search" placeholder="Search..." />
-            <select name="category">
-                <option value="">All Categories</option>
-                {% for cat in categories %}
-                <option value="{{ cat }}">{{ cat }}</option>
-                {% endfor %}
-            </select>
-            <button type="submit">Search</button>
-        </form>
-    </header>
-
-    <div class="container">
-        {% for product in products %}
-        <div class="card">
-            <img src="{{ product.image }}" alt="{{ product.name }}">
-            <h4>{{ product.name }}</h4>
-            <p>৳{{ product.price }}</p>
-            <p><b>Model:</b> {{ product.model }}</p>
-            <p><b>Stock:</b> {{ product.stock }}</p>
-            <p><b>Category:</b> {{ product.category }}</p>
-        </div>
+  <header>
+    <form method="get" action="/" style="display:flex; gap:10px;">
+      <input type="text" name="search" placeholder="Search..." />
+      <select name="category">
+        <option value="">All Categories</option>
+        {% for cat in categories %}
+        <option value="{{ cat }}">{{ cat }}</option>
         {% endfor %}
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <div class="container">
+    {% for p in products %}
+    <div class="card">
+      <img src="{{ p.image }}" alt="{{ p.name }}">
+      <h4>{{ p.name }}</h4>
+      <p>৳{{ p.price }}</p>
+      <p><b>Model:</b> {{ p.model }}</p>
+      <p><b>Stock:</b> {{ p.stock }}</p>
+      <p><b>Category:</b> {{ p.category }}</p>
     </div>
+    {% endfor %}
+  </div>
 </body>
 </html>
