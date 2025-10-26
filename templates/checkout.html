@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Checkout</h2>
+<form method="post" action="/process_payment">
+  <input type="hidden" name="total" value="{{ total }}">
+  <p>Total amount: ৳{{ total }}</p>
+  <button type="submit">Pay with SSLCommerz (Sandbox)</button>
+</form>
+{% endblock %}
