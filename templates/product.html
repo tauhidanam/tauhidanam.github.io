@@ -1,47 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ p.name }} - RoboHTA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-
-<nav class="navbar navbar-dark bg-dark px-4">
-  <a href="/" class="navbar-brand fw-bold text-light">⚡ RoboHTA Electronics</a>
-</nav>
-
-<div class="container py-5">
-  <div class="row">
-    <div class="col-md-6 text-center">
-      <img src="{{ p.image }}" class="img-fluid rounded shadow" style="max-height:400px;">
-    </div>
-    <div class="col-md-6">
-      <h3 class="fw-bold">{{ p.name }}</h3>
-      <h4 class="text-success">৳{{ "%.2f"|format(p.price) }}</h4>
-      <p>Model: <b>{{ p.model }}</b></p>
-      <p>Stock: <b>{{ p.stock }}</b></p>
-      <p>Category: <b>{{ p.category }}</b></p>
-      <p>{{ p.description }}</p>
-      <hr>
-      <button class="btn btn-primary me-2">🛒 Add to Cart</button>
-      <button class="btn btn-success">⚡ Buy Now</button>
-    </div>
-  </div>
-
-  <hr class="my-4">
-
-  <h5>Specifications</h5>
-  <ul>
-    {% for k, v in p.specs.items() %}
-    <li><b>{{ k }}:</b> {{ v }}</li>
-    {% endfor %}
-  </ul>
+{% extends 'base.html' %}
+{% block content %}
+<div class="product-detail">
+  <img src="{{ product.image }}" alt="{{ product.name }}">
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <p><b>৳{{ product.price }}</b></p>
+  <a href="/add_to_cart/{{ product.id }}" class="btn">Add to Cart</a>
 </div>
-
-<footer class="bg-dark text-light text-center py-3">
-  © 2025 RoboHTA Electronics
-</footer>
-
-</body>
-</html>
+{% endblock %}
