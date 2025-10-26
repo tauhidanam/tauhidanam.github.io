@@ -898,5 +898,14 @@
     "stock": 30,
     "image": "https://source.unsplash.com/400x400/?Tools,electronics",
     "description": "High quality tools for electronics projects. Ideal for students and hobbyists."
+  },
+  {
+    "id": 101,
+    "name": "12V Realy (DC)",
+    "category": "Tools",
+    "price": 30,
+    "stock": 30,
+    "image": "https://www.robotechbd.com/wp-content/uploads/2021/04/relay-12v-1.jpg",
+    "description": "High quality tools for electronics projects. Ideal for students and hobbyists."
   }
 ]
