@@ -1,118 +1,47 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow-lg grid md:grid-cols-2 gap-8">
-  <!-- Product Images -->
-  <div>
-    <img id="mainImage" src="{{ product.image }}" alt="{{ product.name }}" class="w-full h-96 object-contain rounded-lg border p-2 mb-4">
-    {% if product.images %}
-    <div class="flex gap-2">
-      {% for img in product.images %}
-      <img src="{{ img }}" alt="thumb" class="w-20 h-20 object-contain rounded border cursor-pointer"
-           onclick="document.getElementById('mainImage').src='{{ img }}'">
-      {% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ p.name }} - RoboHTA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark px-4">
+  <a href="/" class="navbar-brand fw-bold text-light">⚡ RoboHTA Electronics</a>
+</nav>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img src="{{ p.image }}" class="img-fluid rounded shadow" style="max-height:400px;">
     </div>
-    {% endif %}
-  </div>
-
-  <!-- Product Info -->
-  <div>
-    <h1 class="text-3xl font-bold mb-2">{{ product.name }}</h1>
-    {% if product.model %}
-    <p class="text-sm text-gray-500 mb-2">Model: {{ product.model }}</p>
-    {% endif %}
-    <p class="text-2xl text-blue-600 font-semibold mb-2">${{ "%.2f"|format(product.price) }}</p>
-
-    <!-- Rating stars -->
-    {% if product.rating %}
-    <div class="flex items-center mb-4">
-      {% for i in range(1, 6) %}
-        {% if i <= product.rating %}
-          <span class="text-yellow-400">★</span>
-        {% else %}
-          <span class="text-gray-300">★</span>
-        {% endif %}
-      {% endfor %}
-      <span class="ml-2 text-sm text-gray-600">({{ product.reviews|default(0) }} reviews)</span>
+    <div class="col-md-6">
+      <h3 class="fw-bold">{{ p.name }}</h3>
+      <h4 class="text-success">৳{{ "%.2f"|format(p.price) }}</h4>
+      <p>Model: <b>{{ p.model }}</b></p>
+      <p>Stock: <b>{{ p.stock }}</b></p>
+      <p>Category: <b>{{ p.category }}</b></p>
+      <p>{{ p.description }}</p>
+      <hr>
+      <button class="btn btn-primary me-2">🛒 Add to Cart</button>
+      <button class="btn btn-success">⚡ Buy Now</button>
     </div>
-    {% endif %}
-
-    <!-- Short Specs -->
-    {% if product.specs %}
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-      {% for spec in product.specs %}
-      <li>{{ spec }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    <!-- Quantity and Add to Cart -->
-    <div class="flex items-center gap-2 mb-4">
-      <input type="number" min="1" value="1" class="border rounded px-2 py-1 w-20">
-      <a href="/add_to_cart/{{ product.id }}" 
-         class="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-lg text-lg">Add to Cart</a>
-      <a href="/checkout" 
-         class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg text-lg">Buy Now</a>
-    </div>
-
-    <!-- Stock Status -->
-    {% if product.stock %}
-    <p class="text-sm text-green-600 font-semibold mb-4">In Stock</p>
-    {% endif %}
-  </div>
-</div>
-
-<!-- Tabs: Description, Details, Reviews -->
-<div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow-lg mt-6">
-  <div class="flex border-b mb-4">
-    <button onclick="openTab('description')" class="tab-button px-4 py-2 border-b-2 border-blue-600 font-semibold">Description</button>
-    <button onclick="openTab('details')" class="tab-button px-4 py-2">Product Details</button>
-    <button onclick="openTab('reviews')" class="tab-button px-4 py-2">Reviews</button>
   </div>
 
-  <div id="description" class="tab-content">
-    <p>{{ product.description }}</p>
-  </div>
-  <div id="details" class="tab-content hidden">
-    {% if product.details %}
-      <ul class="list-disc list-inside">
-        {% for d in product.details %}
-        <li>{{ d }}</li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>No additional details.</p>
-    {% endif %}
-  </div>
-  <div id="reviews" class="tab-content hidden">
-    {% if product.review_text %}
-      <p>{{ product.review_text }}</p>
-    {% else %}
-      <p>No reviews yet.</p>
-    {% endif %}
-  </div>
-</div>
+  <hr class="my-4">
 
-<!-- Related Products -->
-{% if related_products %}
-<div class="max-w-6xl mx-auto mt-8">
-  <h2 class="text-2xl font-bold mb-4">Other Products You May Like</h2>
-  <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
-    {% for p in related_products %}
-    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
-      <img src="{{ p.image }}" class="w-full h-40 object-contain mb-2">
-      <h3 class="font-semibold">{{ p.name }}</h3>
-      <p class="text-blue-600 font-bold">${{ "%.2f"|format(p.price) }}</p>
-      <a href="/product/{{ p.id }}" class="text-sm text-blue-600 hover:underline">View</a>
-    </div>
+  <h5>Specifications</h5>
+  <ul>
+    {% for k, v in p.specs.items() %}
+    <li><b>{{ k }}:</b> {{ v }}</li>
     {% endfor %}
-  </div>
+  </ul>
 </div>
-{% endif %}
 
-<script>
-function openTab(tabId) {
-  document.querySelectorAll('.tab-content').forEach(tc => tc.classList.add('hidden'));
-  document.getElementById(tabId).classList.remove('hidden');
-}
-</script>
-{% endblock %}
+<footer class="bg-dark text-light text-center py-3">
+  © 2025 RoboHTA Electronics
+</footer>
+
+</body>
+</html>
