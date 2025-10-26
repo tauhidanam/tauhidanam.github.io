@@ -1,50 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>RoboHTA Electronics Store</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-</head>
-<body class="bg-light">
-
-<nav class="navbar navbar-dark bg-dark px-4">
-  <a href="/" class="navbar-brand fw-bold text-light">⚡ RoboHTA Electronics</a>
-  <form class="d-flex" method="get" action="/">
-    <input name="q" value="{{ q }}" class="form-control me-2" type="search" placeholder="Search...">
-    <select name="category" class="form-select me-2">
-      <option value="">All Categories</option>
-      {% for c in categories %}
-        <option value="{{ c }}" {% if c==cat %}selected{% endif %}>{{ c }}</option>
-      {% endfor %}
-    </select>
-    <button class="btn btn-success">Search</button>
-  </form>
-</nav>
-
-<div class="container my-4">
-  <div class="row g-3">
-    {% for p in products %}
-    <div class="col-md-3">
-      <div class="card shadow-sm h-100">
-        <img src="{{ p.image }}" class="card-img-top" style="height:180px;object-fit:cover;">
-        <div class="card-body text-center">
-          <h6 class="fw-bold">{{ p.name }}</h6>
-          <p class="mb-1 text-success">৳{{ "%.2f"|format(p.price) }}</p>
-          <p class="mb-0"><small>Model: {{ p.model }}</small></p>
-          <p class="mb-1"><small>Stock: {{ p.stock }}</small></p>
-          <p class="mb-2"><small>Category: {{ p.category }}</small></p>
-          <a href="/product/{{ p.id }}" class="btn btn-primary btn-sm">View</a>
-        </div>
-      </div>
-    </div>
+{% extends 'base.html' %}
+{% block content %}
+<form method="get" class="search-bar">
+  <input type="text" name="q" placeholder="Search..." value="{{ query }}">
+  <select name="category">
+    <option value="">All Categories</option>
+    {% for c in categories %}
+      <option value="{{ c }}" {% if c==selected_category %}selected{% endif %}>{{ c }}</option>
     {% endfor %}
+  </select>
+  <button type="submit">Search</button>
+</form>
+
+<div class="product-grid">
+  {% for p in products %}
+  <div class="card">
+    <img src="{{ p.image }}" alt="{{ p.name }}">
+    <h3>{{ p.name }}</h3>
+    <p>{{ p.category }}</p>
+    <p>৳{{ p.price }}</p>
+    <a href="/product/{{ p.id }}">View</a>
   </div>
+  {% endfor %}
 </div>
-
-<footer class="bg-dark text-light text-center py-3">
-  © 2025 RoboHTA Electronics. All Rights Reserved.
-</footer>
-
-</body>
-</html>
+{% endblock %}
